@@ -1,8 +1,16 @@
 fun main () {
-    println("Hello, World")
-    var userName: String="Dante"
-    val age: Int=23
-//    var usa-se para variaveis mutaveis e val usa-se para variaveis imutaveis
-    println("Hello there, my name is $userName i'm $age years old and in 4 years i'll have ${age +4}")
-//   o simbolo $ e um placeholder, onde coloca-se variaveis dentro de strings
+    var a =20
+    var b =10
+    val soma = a + b
+    println("a + b = ${a+b} ou "+soma)
+    val sub = a - b
+    println("a - b = ${a-b} ou "+sub)
+    val multi = a * b
+    println("a * b = ${a*b} ou "+multi)
+    val div = a / b
+    println("a / b = ${a/b} ou "+div)
+
+    print(a shl 3)
+//    its a round up operation
+
 }
