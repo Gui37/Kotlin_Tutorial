@@ -1,16 +1,14 @@
 fun main () {
-    var a =20
-    var b =10
-    val soma = a + b
-    println("a + b = ${a+b} ou "+soma)
-    val sub = a - b
-    println("a - b = ${a-b} ou "+sub)
-    val multi = a * b
-    println("a * b = ${a*b} ou "+multi)
-    val div = a / b
-    println("a / b = ${a/b} ou "+div)
-
-    print(a shl 3)
-//    its a round up operation
-
+  val names = arrayOf("Test1","Test2","Test3", "Test4","Test5")
+    println("The size of this array is ${names.size}")
+    println("The first test is : ${names[0]}")
+    names [0]= "Test"
+    println("The first test is : ${names[0]}")
+    println("The last element of this array is ${names[names.size-1]}")
+    println("-------------------------------------------------------")
+    val numbers = intArrayOf(1,2,3,4,5,6,7,8,9)
+    println("The size of this array is :${numbers.size}")
+    println("The lenght of this array is :${numbers.size-1}")
+    println("The last element of this array is ${numbers[numbers.size-1]}")
+    println("The sum of the first element and last element is :${numbers[numbers.size-1]+numbers[0]}")
 }
