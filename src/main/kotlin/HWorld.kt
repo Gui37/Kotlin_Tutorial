@@ -1,30 +1,30 @@
 fun main () {
-    greet("Dante", 5)
-    greet2("Dante", 5)
-    printMax(30,30)
-}
-fun greet(name:String, rep:Int) {
-    for (i in 0 until rep) {
-        println("Hello There! Your name is $name")
-    }
+    var maxV = getMax(10,30)
+    println(maxV)//we could call the function inside the println function
+    maxV = getMax2(50,30)
+    println(maxV)//we could call the function inside the println function
+    println(double(10))
 }
 
-fun greet2(name: String, rep: Int){
-    var repLeft = rep
-    while(repLeft>0){
-        println("Hi There! Your name is $name")
-        repLeft--
-    }
+fun getMax(numb1: Int, numb2: Int): Int{
+    val max: Int = if (numb1>numb2){
+        numb1
+    }else
+        numb2
+    return max
 }
 
-fun printMax(numb1: Int, numb2: Int){
-    if (numb1>numb2){
-        println("The larger number of these two is $numb1")
-    }else if (numb2>numb1){
-        println("The larger number of these two is $numb2")
-    } else{
-        println("There is no larger number, they have the same value $numb1 = $numb2")
+fun getMax2(numb3: Int, numb4:Int): Int{
+    if (numb3>numb4){
+        return numb3
+    } else {
+        return numb4
     }
+
+}
+
+fun double(num: Int): Int{
+    return num*2
 }
 
 
