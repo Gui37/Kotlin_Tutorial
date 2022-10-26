@@ -1,21 +1,20 @@
-var topLevelVariable = "Im a top-level variable"//This variable can be used in any function and should always be declared
-const val STRING_CONSTANT = "Im a constant" // In this case the variable is immutable, and we add a const to explicit it
-fun main () {
-    println(topLevelVariable)
-    topLevelVariable = "I can change"
-    println("The biggest value is :"+getMax(100,52,22,468,54,123))
+fun main() { //we have different ways of implement a class in kotlin, like the way we define it inside the class
+    //with this one, we define the values in the class, not in the instance of it
+    val person = Person()
+    println("Person One\nPerson name: ${person.name} \nPerson age: ${person.age} \nPerson height: ${person.height}")
+
+    //Here we define the values in the instance of the class
+    val persona= Person2(name="Hobbo",age=35,height=180)
+    println("Person One\nPerson name: ${persona.name} \nPerson age: ${persona.age} \nPerson height: ${persona.height}")
 
 }
-fun getMax(first:Int,vararg remain:Int):Int{
-    println(topLevelVariable)
-    println(STRING_CONSTANT)
-    var max = first
-    for (i in remain){
-        if (i>max){
-            max=i
-        }
-    }
-    return max
+
+class Person{
+    var name="Gui"
+    var age=27
+    var height=170
 }
 
-
+class Person2(name: String, var age: Int, var height: Int){//it's called a constructor, and we call it in the instance of the class
+    var name=name // inside a class we call it a property instead of variables
+}
